@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #f0ddbc;
+  --secondary-color: #3a4257;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.max-width {
+  width: 100%;
+  margin: auto;
+}
+
+/* Navbar Styling */
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.brand-title {
+  margin: 0.5rem;
+}
+
+.brand-title a {
+  font-weight: 500;
+  color: white;
+}
+.brand-title a span.logo-highlight {
+  color: rgb(66, 17, 180);
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  list-style: none;
+}
+
+.navbar-links ul li a {
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  transition: all ease 10ms;
+}
+
+.navbar-links a:hover {
+  color: rgb(66, 17, 180);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* hamburger */
+.navbar i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.6rem;
+  display: none;
+}
+
+/* Home styling */
+
+.home {
+  display: flex;
+  background-image: url("images/home.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  display: flex;
+  justify-content: start;
+}
+
+.home-content {
+  margin-top: 50%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.home-content .text-1 {
+  font-size: 2.7rem;
+}
+
+.home-content .text-2 {
+  font-size: 7rem;
+  font-weight: 600;
+}
+
+.home-content .text-3 {
+  font-size: 4rem;
+}
+
+.home-content .text-3 span {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+/* About Styling */
+
+section {
+  padding: 3em 2em;
+}
+
+.about .heading {
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  padding-bottom: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about .heading::before {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 0.3rem;
+  background: black;
+  bottom: 0rem;
+}
+
+.about .heading::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  font-size: 2rem;
+  color: rgb(66, 17, 180);
+  background: white;
+  transform: translateX(-50%);
+}
+
+.about-content {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.about .about-content .left-column {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.about .about-content .left-column img {
+  width: 30rem;
+  filter: drop-shadow(0 0 1rem rgb(214, 211, 211));
+}
+
+.about .about-content .right-column {
+  width: 55%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.about-content .right-column span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(66, 17, 180);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  /* navbar styling */
+  .navbar i.fa-bars {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    display: none;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+    padding: 0.2rem;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .navbar .fa-bars.disabled {
+    display: none;
+  }
+
+  .navbar .fa-close.active {
+    display: block;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem 0.5rem;
+  min-width: 10rem;
+  max-width: 22rem;
+  box-shadow: 0 0.5rem 1rem black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > img {
+  height: 10rem;
+  width: auto;
+}
+
+.card > p {
+  text-align: justify;
+}
